@@ -1,0 +1,6 @@
+# ignores for publishing
+
+src
+.babelrc
+.gitignore
+webpack.config.js

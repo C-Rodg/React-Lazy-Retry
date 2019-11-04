@@ -1,0 +1,35 @@
+{
+	"name": "react-lazy-retry",
+	"version": "1.0.0",
+	"description": "A way to allow users to retry their lazy loaded React components.",
+	"main": "dist/index.js",
+	"repository": "https://github.com/C-Rodg/React-Lazy-Retry.git",
+	"author": "<C-Rodg@users.noreply.github.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/C-Rodg/React-Lazy-Retry/issues"
+	},
+	"keywords": [
+		"react",
+		"lazy",
+		"retry",
+		"lazy loaded",
+		"suspense",
+		"dynamic"
+	],
+	"peerDependencies": {
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.5.5",
+		"@babel/core": "^7.5.5",
+		"@babel/preset-env": "^7.5.5",
+		"@babel/preset-react": "^7.0.0",
+		"babel-loader": "^8.0.6",
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0",
+		"webpack": "^4.39.2",
+		"webpack-cli": "^3.3.6"
+	}
+}
