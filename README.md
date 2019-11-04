@@ -52,6 +52,14 @@ const App = ({ shouldShowAsyncComponent }) => {
 };
 ```
 
+## API
+
+| Argument Number | Type              | Default                                  | Description                                                                                                                                                                                          |
+| :-------------- | :---------------- | :--------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1               | `Promise`         | None                                     | This is a promise for the lazy-loaded component. Typically done using `import`.                                                                                                                      |
+| 2               | `React Component` | `<>Loading...</>`                        | This will be shown while the promise for the lazy-loaded component is waiting to resolve. Optional.                                                                                                  |
+| 3               | `React Component` | `<button onClick={retry}>Retry</button>` | This is the UI that will be shown to the user if the request for the lazy-loaded component fails. A `retry` function is passed as props, which if called will request the component again. Optional. |
+
 ## Creator
 
 [Curtis](https://curtisrodgers.com/)
