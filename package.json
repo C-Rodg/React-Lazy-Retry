@@ -17,6 +17,10 @@
 		"suspense",
 		"dynamic"
 	],
+	"scripts": {
+		"build": "rm -rf ./dist && webpack --mode production",
+		"prepublishOnly": "yarn run build"
+	},
 	"peerDependencies": {
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0"
