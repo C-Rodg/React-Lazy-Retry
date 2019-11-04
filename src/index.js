@@ -14,10 +14,10 @@ const RetryableLazy = (
 		</button>
 	)
 ) => {
-	const LazyComponent = props => {
+	const RetryWrapper = props => {
 		const [loading, setLoading] = useState(true);
 		const retry = useCallback(() => setLoading(true), []);
-		const LazyPromise = useMemo(
+		const LazyComponent = useMemo(
 			() =>
 				lazy(() =>
 					promise().catch(() => {
@@ -29,16 +29,16 @@ const RetryableLazy = (
 		);
 		return (
 			<Suspense fallback={<LoaderView />}>
-				<LazyPromise {...props} />
+				<LazyComponent {...props} />
 			</Suspense>
 		);
 	};
 
-	LazyComponent.displayName = `RetryableLazy(${getHOCDisplayName(
-		LazyComponent
+	RetryWrapper.displayName = `RetryableLazy(${getHOCDisplayName(
+		RetryWrapper
 	)})`;
 
-	return LazyComponent;
+	return RetryWrapper;
 };
 
 export default RetryableLazy;
