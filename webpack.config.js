@@ -20,23 +20,25 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			react: path.resolve(__dirname, './node_modules/react'),
-			'react-dom': path.resolve(__dirname, './node_modules/react-dom')
+			react: path.resolve(__dirname, 'node_modules/react'),
+			'react-dom': path.resolve(__dirname, 'node_modules/react-dom')
 		}
 	},
 	externals: {
 		// Don't bundle react or react-dom
 		react: {
-			commonjs: 'react',
+			root: 'React',
 			commonjs2: 'react',
-			amd: 'React',
-			root: 'React'
+			commonjs: 'react',
+			amd: 'react',
+			umd: 'react'
 		},
 		'react-dom': {
-			commonjs: 'react-dom',
+			root: 'ReactDOM',
 			commonjs2: 'react-dom',
-			amd: 'ReactDOM',
-			root: 'ReactDOM'
+			commonjs: 'react-dom',
+			amd: 'react-dom',
+			umd: 'react-dom'
 		}
 	}
 };
